@@ -6,3 +6,4 @@
 5. strategy 策略模式
 6. template 模板模式
 7. adapter 适配器模式
+8. proxy 代理模式
