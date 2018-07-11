@@ -7,3 +7,4 @@
 6. template 模板模式
 7. adapter 适配器模式
 8. proxy 代理模式
+9. command 命令模式
