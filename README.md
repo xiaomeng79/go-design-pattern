@@ -8,3 +8,8 @@
 7. adapter 适配器模式
 8. proxy 代理模式
 9. command 命令模式
+10. flyweight 享元模式
+11. observer 观察者模式
+12. simpleFactory 简单工厂模式
+13. factoryMethod 工厂方法
+14. abstractFactory 抽象工厂
