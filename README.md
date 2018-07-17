@@ -13,3 +13,4 @@
 12. simpleFactory 简单工厂模式
 13. factoryMethod 工厂方法
 14. abstractFactory 抽象工厂
+15. prototype 原型模式
