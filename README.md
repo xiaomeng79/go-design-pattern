@@ -43,3 +43,5 @@
 14. abstractFactory 抽象工厂
 15. prototype 原型模式
 16. bridge 桥接模式
+17. facade 外观模式
+
