@@ -44,4 +44,6 @@
 15. prototype 原型模式
 16. bridge 桥接模式
 17. facade 外观模式
+18. mediator 中介者模式
+
 
