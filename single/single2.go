@@ -14,7 +14,7 @@ var (
 
 func init() {
 	instance2 = &http.Client{
-		Timeout:30,//超时30s
-		Transport:http.DefaultTransport,
+		Timeout:   30, //超时30s
+		Transport: http.DefaultTransport,
 	}
 }

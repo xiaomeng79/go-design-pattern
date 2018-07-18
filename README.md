@@ -46,4 +46,6 @@
 17. facade 外观模式
 18. mediator 中介者模式
 19. interperter 解释器模式
+20. iterator 迭代器模式
+
 

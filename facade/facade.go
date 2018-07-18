@@ -30,9 +30,9 @@ import "fmt"
 //
 //（3）在维护一个遗留的大型系统时，可能这个系统已经变得非常难以维护和扩展，此时可以考虑为新系统开发一个Facade类，来提供遗留系统的比较清晰简单的接口，让新系统与Facade类交互。
 
-
 //cpu
-type cpu struct {}
+type cpu struct{}
+
 func (c cpu) startup() {
 	fmt.Println("cpu startup")
 }
@@ -42,6 +42,7 @@ func (c cpu) shutdown() {
 
 //memory
 type memory struct{}
+
 func (m memory) startup() {
 	fmt.Println("memory startup")
 }
@@ -51,15 +52,16 @@ func (m memory) shutdown() {
 
 //使用外观模式
 
-type Computer struct{
-	cpu cpu
+type Computer struct {
+	cpu    cpu
 	memory memory
 }
+
 //实例化computer
 func NewComputer() *Computer {
-	return &Computer{cpu:cpu{},memory:memory{}}
+	return &Computer{cpu: cpu{}, memory: memory{}}
 }
-func (c *Computer)StartUp() {
+func (c *Computer) StartUp() {
 	c.cpu.startup()
 	c.memory.startup()
 }
@@ -68,4 +70,3 @@ func (c *Computer) ShutDown() {
 	c.cpu.shutdown()
 	c.memory.shutdown()
 }
-

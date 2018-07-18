@@ -31,7 +31,6 @@ type (
 )
 
 type (
-
 	eventObserver struct {
 		id int
 	}
@@ -41,7 +40,7 @@ type (
 )
 
 func (o *eventObserver) OnNotify(e Event) {
-	fmt.Printf("*** Observer %d received:%d\n",o.id,e.Data)
+	fmt.Printf("*** Observer %d received:%d\n", o.id, e.Data)
 }
 
 func (o *eventNotifier) Register(l Observer) {
@@ -49,7 +48,7 @@ func (o *eventNotifier) Register(l Observer) {
 }
 
 func (o *eventNotifier) Deregister(l Observer) {
-	delete(o.observers,l)
+	delete(o.observers, l)
 }
 
 func (o *eventNotifier) Notify(e Event) {
@@ -61,14 +60,13 @@ func (o *eventNotifier) Notify(e Event) {
 //测试
 func Test() {
 	//观察者2个
-	ob1 := &eventObserver{id:1}
-	ob2 := &eventObserver{id:2}
+	ob1 := &eventObserver{id: 1}
+	ob2 := &eventObserver{id: 2}
 	//通知者
-	o := eventNotifier{observers:make(map[Observer]struct{},2)}
+	o := eventNotifier{observers: make(map[Observer]struct{}, 2)}
 	//注册
 	o.Register(ob1)
 	o.Register(ob2)
 	//发送
-	o.Notify(Event{Data:222})
+	o.Notify(Event{Data: 222})
 }
-

@@ -12,6 +12,7 @@ type Item interface {
 	Name() string
 	Price() float32
 }
+
 //锁
 type Lock struct {
 }
@@ -19,7 +20,7 @@ type Lock struct {
 func (Lock) Name() string {
 	return "锁"
 }
-func(Lock) Price() float32 {
+func (Lock) Price() float32 {
 	return 22.22
 }
 
@@ -48,18 +49,18 @@ func (Door) Price() float32 {
 type BigDoor []Item
 
 func (this *BigDoor) AddItem(item ...Item) {
-	*this = append(*this,item...)
+	*this = append(*this, item...)
 }
 
 func (this BigDoor) GetCost() (cost float32) {
-	for _,v := range this {
+	for _, v := range this {
 		cost += v.Price()
 	}
 	return
 }
 
 func (this BigDoor) ShowItems() (msg string) {
-	for _,v := range this {
+	for _, v := range this {
 		msg += "  组件:" + v.Name()
 	}
 	return
@@ -69,9 +70,8 @@ func (this BigDoor) ShowItems() (msg string) {
 type DoorBuilder struct {
 }
 
-func (DoorBuilder) Build(item ...Item) (*BigDoor) {
+func (DoorBuilder) Build(item ...Item) *BigDoor {
 	bigdoor := new(BigDoor)
 	bigdoor.AddItem(item...)
 	return bigdoor
 }
-

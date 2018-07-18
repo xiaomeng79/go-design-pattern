@@ -11,33 +11,36 @@ import "fmt"
 
 //聊天室
 type IChatRoom interface {
-	SendAllUserMessage(string)//向所有用户发送消息
+	SendAllUserMessage(string) //向所有用户发送消息
 	JoinUsers(...int)
 }
+
 //用户
 type IUser interface {
-	Join(IChatRoom)//加入聊天室
-	SendMessage(string)//发送消息
+	Join(IChatRoom)     //加入聊天室
+	SendMessage(string) //发送消息
 }
 
 //聊天室
 type ChatRoom1 struct {
 	userIds []int
 }
+
 func (c *ChatRoom1) SendAllUserMessage(msg string) {
-	for _,v := range c.userIds {
-		fmt.Printf("发送给用户：%d,消息为:%s\n",v,msg)
+	for _, v := range c.userIds {
+		fmt.Printf("发送给用户：%d,消息为:%s\n", v, msg)
 	}
 }
-func(c *ChatRoom1) JoinUsers(uid ...int) {
-	c.userIds = append(c.userIds,uid...)
+func (c *ChatRoom1) JoinUsers(uid ...int) {
+	c.userIds = append(c.userIds, uid...)
 }
 
 //用户
 type User struct {
 	Id int
-	c IChatRoom
+	c  IChatRoom
 }
+
 func (u *User) Join(c IChatRoom) {
 	c.JoinUsers(u.Id)
 	u.c = c

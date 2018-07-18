@@ -1,6 +1,5 @@
 package factorymethod
 
-
 func ExampleDellMouseFactory_Create() {
 	var dmf DellMouseFactory
 	dm := dmf.Create()

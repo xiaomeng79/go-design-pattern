@@ -19,6 +19,7 @@ type ICommand interface {
 type OpenCommand struct {
 	Tv *TV
 }
+
 func (o OpenCommand) Press() {
 	o.Tv.Open()
 }
@@ -27,6 +28,7 @@ func (o OpenCommand) Press() {
 type CloseCommand struct {
 	Tv *TV
 }
+
 func (c CloseCommand) Press() {
 	c.Tv.Close()
 }
@@ -41,18 +43,18 @@ type TV struct {
 }
 
 func (t *TV) Open() {
-	fmt.Println("打开"+t.Name+"电视")
+	fmt.Println("打开" + t.Name + "电视")
 }
 
 func (t *TV) Close() {
-	fmt.Println("关闭"+t.Name+"电视")
+	fmt.Println("关闭" + t.Name + "电视")
 }
 
 //遥控器
 //按键按下就是设置命令，松开就是执行命令
 type IInvoker interface {
-	SetCommand(ICommand)//设置命令
-	Do()//执行命令
+	SetCommand(ICommand) //设置命令
+	Do()                 //执行命令
 }
 
 type Invoker struct {
@@ -66,5 +68,3 @@ func (i *Invoker) SetCommand(command ICommand) {
 func (i *Invoker) Do() {
 	i.cmd.Press()
 }
-
-

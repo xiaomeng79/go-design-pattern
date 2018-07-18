@@ -19,12 +19,12 @@ type Person struct {
 	sex string
 }
 
-func (p *Person)SetSex() {
+func (p *Person) SetSex() {
 	p.sex = "unknow"
 }
 
 func (p *Person) Eat(s string) {
-	fmt.Println("吃食物 ",s)
+	fmt.Println("吃食物 ", s)
 }
 
 func (p *Person) Dress() {
@@ -43,7 +43,7 @@ func (m Man) SetSex() {
 
 //重写化妆
 func (m Man) Dress() {
-	fmt.Println(m.p.sex,"化妆, ","刮胡子")
+	fmt.Println(m.p.sex, "化妆, ", "刮胡子")
 }
 
 //女人
@@ -57,7 +57,5 @@ func (w Women) SetSex() {
 
 //重写化妆
 func (w Women) Dress() {
-	fmt.Println(w.p.sex,"化妆, ","涂口红")
+	fmt.Println(w.p.sex, "化妆, ", "涂口红")
 }
-
-

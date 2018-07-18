@@ -1,8 +1,8 @@
 package flyweight
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 //mysql连接数不足的时候，是否新建
@@ -17,6 +17,6 @@ func TestNewMysqlConnPool(t *testing.T) {
 	str := conn2.Do()
 	mysqlpool.Put(conn1)
 	mysqlpool.Put(conn2)
-	assert.Equal(t,"done",str,"fail")
+	assert.Equal(t, "done", str, "fail")
 
 }

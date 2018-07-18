@@ -22,11 +22,11 @@ func (p *People) SetName(name string) {
 }
 
 func (p *People) Eat() {
-	fmt.Println(p.name,"在吃饭")
+	fmt.Println(p.name, "在吃饭")
 }
 
 func (p *People) Sleep() {
-	fmt.Println(p.name,"在睡觉")
+	fmt.Println(p.name, "在睡觉")
 }
 
 func (p *People) Clone() *People {

@@ -6,8 +6,6 @@ package decorator
 
 //实例:对蛋糕进行包装，包装：普通包装，塑料包装 玻璃包装
 
-
-
 //包装
 type IPack interface {
 	Desc() string
@@ -16,7 +14,7 @@ type IPack interface {
 
 //普通包装
 type Packing struct {
-	name string
+	name  string
 	price float32
 }
 
@@ -30,8 +28,8 @@ func (p Packing) Price() float32 {
 
 //塑料盒包装
 type PlasticPack struct {
-	pack IPack
-	name string
+	pack  IPack
+	name  string
 	price float32
 }
 
@@ -44,13 +42,13 @@ func (p PlasticPack) Price() float32 {
 
 //玻璃盒包装
 type GlassPack struct {
-	pack IPack
-	name string
+	pack  IPack
+	name  string
 	price float32
 }
 
 func (p GlassPack) Desc() string {
-	return   p.pack.Desc() + p.name
+	return p.pack.Desc() + p.name
 }
 func (p GlassPack) Price() float32 {
 	return p.pack.Price() + p.price

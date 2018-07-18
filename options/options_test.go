@@ -1,9 +1,9 @@
 package options
 
 import (
-	"testing"
-	"log"
 	"github.com/stretchr/testify/assert"
+	"log"
+	"testing"
 )
 
 func TestNewLog(t *testing.T) {
@@ -11,7 +11,7 @@ func TestNewLog(t *testing.T) {
 	l := NewLog(
 		WithPrefix("noprefix"),
 	)
-	assert.Equal(t,"noprefix",l.Prefix(),"prefix not equal")
+	assert.Equal(t, "noprefix", l.Prefix(), "prefix not equal")
 	//flag 使用默认值
-	assert.Equal(t,log.Ltime,l.Flags(),"flag not equal")
+	assert.Equal(t, log.Ltime, l.Flags(), "flag not equal")
 }

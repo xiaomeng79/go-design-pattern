@@ -14,7 +14,7 @@ import "github.com/xiaomeng79/go-design-pattern/proxy/readfile"
 //实例2:也可以实现一个代理，可以读取本地文件，可以读取网络文件(未实现)
 
 type IReadFileProxy interface {
-	ReadFileContext(string,string) string
+	ReadFileContext(string, string) string
 }
 
 type ReadFileProxy struct {
@@ -27,7 +27,7 @@ func (r ReadFileProxy) auth(name string) bool {
 	return false
 }
 
-func (r ReadFileProxy) ReadFileContext(name,filename string) string {
+func (r ReadFileProxy) ReadFileContext(name, filename string) string {
 	if !r.auth(name) {
 		return "无权查看"
 	}
@@ -35,5 +35,3 @@ func (r ReadFileProxy) ReadFileContext(name,filename string) string {
 	read := readfile.ReadFile{}
 	return read.ReadFile(filename)
 }
-
-

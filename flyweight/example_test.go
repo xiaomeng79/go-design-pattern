@@ -8,7 +8,7 @@ func ExampleMysqlConnect_Do() {
 	//获取一个连接
 	conn := mysqlpool.Get()
 	//执行操作
-	 fmt.Println(conn.Do())
+	fmt.Println(conn.Do())
 	//放入连接池
 	mysqlpool.Put(conn)
 	//OutPut:

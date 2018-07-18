@@ -16,14 +16,14 @@ type IMouse interface {
 }
 
 //戴尔鼠标
-type DellMouse struct {}
+type DellMouse struct{}
 
 func (d DellMouse) SayMouseBrand() {
 	fmt.Println("Dell Mouse")
 }
 
 //惠普鼠标
-type HpMouse struct {}
+type HpMouse struct{}
 
 func (h HpMouse) SayMouseBrand() {
 	fmt.Println("Hp Mouse")
@@ -33,15 +33,16 @@ func (h HpMouse) SayMouseBrand() {
 type IMouseFactory interface {
 	Create() IMouse
 }
+
 //戴尔鼠标工厂实现
-type DellMouseFactory struct {}
+type DellMouseFactory struct{}
 
 func (d DellMouseFactory) Create() IMouse {
 	return DellMouse{}
 }
 
 //惠普鼠标工厂
-type HpMouseFactory struct {}
+type HpMouseFactory struct{}
 
 func (h HpMouseFactory) Create() IMouse {
 	return HpMouse{}

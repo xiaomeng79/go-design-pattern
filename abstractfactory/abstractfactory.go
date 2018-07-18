@@ -16,14 +16,14 @@ type IMouse interface {
 }
 
 //戴尔鼠标
-type DellMouse struct {}
+type DellMouse struct{}
 
 func (d DellMouse) SayMouseBrand() {
 	fmt.Println("Dell Mouse")
 }
 
 //惠普鼠标
-type HpMouse struct {}
+type HpMouse struct{}
 
 func (h HpMouse) SayMouseBrand() {
 	fmt.Println("Hp Mouse")
@@ -33,15 +33,16 @@ func (h HpMouse) SayMouseBrand() {
 type IKeybo interface {
 	SayKeyBoBrand()
 }
+
 //戴尔键盘
-type DellKeybo struct {}
+type DellKeybo struct{}
 
 func (d DellKeybo) SayKeyBoBrand() {
 	fmt.Println("Dell Keybo")
 }
 
 //惠普键盘
-type HpKeybo struct {}
+type HpKeybo struct{}
 
 func (h HpKeybo) SayKeyBoBrand() {
 	fmt.Println("Hp Keybo")
@@ -49,9 +50,10 @@ func (h HpKeybo) SayKeyBoBrand() {
 
 //抽象工厂
 type IPcFactory interface {
-	CreateMouse()//创建鼠标
-	CreateKeybo()//创建键盘
+	CreateMouse() //创建鼠标
+	CreateKeybo() //创建键盘
 }
+
 //惠普工厂，惠普鼠标 + 戴尔键盘
 type HpFactory struct {
 	Mouse IMouse
@@ -79,4 +81,3 @@ func (d *DellFactory) CreateMouse() {
 func (d *DellFactory) CreateKeybo() {
 	d.Keybo = DellKeybo{}
 }
-

@@ -25,16 +25,18 @@ import "fmt"
 
 //抽象的消息接口
 type MessageAbstract interface {
-	SendMessage(text,to string)
+	SendMessage(text, to string)
 }
+
 //实现的消息接口
 type MessageImplementer interface {
-	Send(text,to string)
+	Send(text, to string)
 }
-//SMS消息
-type MessageSMS struct {}
 
-func (m *MessageSMS)Send(text,to string) {
+//SMS消息
+type MessageSMS struct{}
+
+func (m *MessageSMS) Send(text, to string) {
 	fmt.Printf("send %s to %s via SMS", text, to)
 }
 func ViaSMS() MessageImplementer {
@@ -80,5 +82,3 @@ func NewUrgencyMessage(method MessageImplementer) *UrgencyMessage {
 func (m *UrgencyMessage) SendMessage(text, to string) {
 	m.method.Send(fmt.Sprintf("[Urgency] %s", text), to)
 }
-
-

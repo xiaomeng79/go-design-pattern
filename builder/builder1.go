@@ -7,8 +7,7 @@ package builder
 
 //实例:建造一个房子,都需要，不同材料搭建，涂颜色，建设面积不同，但都需要这3个属性
 
-import (
-)
+import ()
 
 //建造一个房子
 
@@ -48,23 +47,24 @@ import (
 //}
 //可以随便输入参数的链式调用
 type IHouse interface {
-	Color(string)  //房子颜色
-	Material(string)  //房子材料
-	Area(float32)  //房子面积
+	Color(string)    //房子颜色
+	Material(string) //房子材料
+	Area(float32)    //房子面积
 }
 
 type House struct {
-	color string
+	color    string
 	material string
-	area float32
+	area     float32
 }
+
 func (h *House) Color(c string) {
 	h.color = c
 }
-func (h *House) Material(m string)  {
+func (h *House) Material(m string) {
 	h.material = m
 }
-func (h *House) Area(a float32)  {
+func (h *House) Area(a float32) {
 	h.area = a
 }
 
@@ -77,6 +77,7 @@ type IBuilder interface {
 type Builder struct {
 	house IHouse
 }
+
 func (b Builder) Color(c string) IBuilder {
 	b.house.Color(c)
 	return b
@@ -94,4 +95,3 @@ func (b Builder) Area(a float32) IBuilder {
 func (b Builder) Build() IHouse {
 	return b.house
 }
-
