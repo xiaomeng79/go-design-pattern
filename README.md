@@ -48,5 +48,6 @@
 19. interperter 解释器模式
 20. iterator 迭代器模式
 21. composite 组合模式
+22. state 状态模式
 
 
