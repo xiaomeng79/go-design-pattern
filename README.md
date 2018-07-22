@@ -49,5 +49,8 @@
 20. iterator 迭代器模式
 21. composite 组合模式
 22. state 状态模式
+23. visitor 访问者模式
+24. memento 备忘录模式
+25. chain 责任链模式
 
 

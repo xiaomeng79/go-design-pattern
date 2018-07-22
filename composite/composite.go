@@ -17,38 +17,41 @@ import (
 //组合接口(公司管理接口)
 
 type ICompany interface {
-	Add(ICompany)//增加
-	Remove(ICompany)//移除
-	Display(int)//展示下级
+	Add(ICompany)    //增加
+	Remove(ICompany) //移除
+	Display(int)     //展示下级
 }
 
 //公共的部分
 type Company struct {
 	Name string
 }
+
 //具体公司(树枝节点[根])
 type RealCompany struct {
 	Company
 	list []ICompany
 }
+
 //新建一个公司
 func NewRealCompany(name string) *RealCompany {
-	return &RealCompany{Company{Name:name},[]ICompany{}}
+	return &RealCompany{Company{Name: name}, []ICompany{}}
 }
+
 //实现接口
 func (r *RealCompany) Add(c ICompany) {
 	if r == nil {
 		return
 	}
-	r.list = append(r.list,c)
+	r.list = append(r.list, c)
 }
 func (r *RealCompany) Remove(c ICompany) {
 	if r == nil {
 		return
 	}
-	for i,v := range r.list {
+	for i, v := range r.list {
 		if v == c {
-			r.list = append(r.list[:i],r.list[i+1:]...)
+			r.list = append(r.list[:i], r.list[i+1:]...)
 		}
 	}
 	return
@@ -57,8 +60,8 @@ func (r *RealCompany) Display(depth int) {
 	if r == nil {
 		return
 	}
-	fmt.Println(strings.Repeat("-",depth)," ",r.Name)
-	for _,val := range r.list {
+	fmt.Println(strings.Repeat("-", depth), " ", r.Name)
+	for _, val := range r.list {
 		val.Display(depth + 2)
 	}
 }
@@ -68,18 +71,18 @@ func (r *RealCompany) Display(depth int) {
 type Department struct {
 	Company
 }
+
 //新建一个公司
 func NewDepartment(name string) *Department {
-	return &Department{Company{Name:name}}
+	return &Department{Company{Name: name}}
 }
+
 //实现接口
-func (r *Department) Add(c ICompany) {}
+func (r *Department) Add(c ICompany)    {}
 func (r *Department) Remove(c ICompany) {}
 func (r *Department) Display(depth int) {
 	if r == nil {
 		return
 	}
-	fmt.Println(strings.Repeat("-",depth)," ",r.Name)
+	fmt.Println(strings.Repeat("-", depth), " ", r.Name)
 }
-
-

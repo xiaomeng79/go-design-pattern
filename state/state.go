@@ -20,13 +20,14 @@ func (l *Light) PressSwitch() {
 		l.State.PressSwitch(l)
 	}
 }
+
 //灯状态接口
 type ILightState interface {
 	PressSwitch(*Light)
 }
 
 //开灯
-type OpenLightState struct {}
+type OpenLightState struct{}
 
 func (o *OpenLightState) PressSwitch(l *Light) {
 	fmt.Println("open light")
@@ -35,7 +36,7 @@ func (o *OpenLightState) PressSwitch(l *Light) {
 }
 
 //关灯
-type CloseLightState struct {}
+type CloseLightState struct{}
 
 func (c *CloseLightState) PressSwitch(l *Light) {
 	fmt.Println("close light")
