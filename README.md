@@ -1,4 +1,9 @@
-# go 设计模式
+## go 设计模式
+
+[![Build Status](https://travis-ci.org/xiaomeng79/go-design-pattern.svg?branch=master)](https://travis-ci.org/xiaomeng79/go-design-pattern) 
+[![GitHub license](https://img.shields.io/github/license/xiaomeng79/go-design-pattern.svg)](https://github.com/xiaomeng79/go-design-pattern/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/xiaomeng79/go-design-pattern.svg)](https://github.com/xiaomeng79/go-design-pattern/issues) [![GitHub stars](https://img.shields.io/github/stars/xiaomeng79/go-design-pattern.svg)](https://github.com/xiaomeng79/go-design-pattern/stargazers)
+
 
 ####  设计模式的六大原则
 1、开闭原则
@@ -27,30 +32,49 @@
 
 *总结：多使用接口，接口组合，针对接口编程*
 
-1. single 单例模式
-2. options 选项模式
-3. builder 建造者模式
-4. decorator 装饰器模式
-5. strategy 策略模式
-6. template 模板模式
-7. adapter 适配器模式
-8. proxy 代理模式
-9. command 命令模式
-10. flyweight 享元模式
-11. observer 观察者模式
-12. simpleFactory 简单工厂模式
-13. factoryMethod 工厂方法
-14. abstractFactory 抽象工厂
-15. prototype 原型模式
-16. bridge 桥接模式
-17. facade 外观模式
-18. mediator 中介者模式
-19. interperter 解释器模式
-20. iterator 迭代器模式
-21. composite 组合模式
-22. state 状态模式
-23. visitor 访问者模式
-24. memento 备忘录模式
-25. chain 责任链模式
+#### 创建型模式
+
+- single 单例模式
+- abstractFactory 抽象工厂
+- builder 建造者模式
+- factoryMethod 工厂方法
+- prototype 原型模式
+- simpleFactory 简单工厂模式
+
+#### 结构型模式
+
+- adapter 适配器模式
+- bridge 桥接模式
+- composite 组合模式
+- decorator 装饰器模式
+- facade 外观模式
+- flyweight 享元模式
+- proxy 代理模式
+- options 选项模式
+
+#### 行为型模式
+
+- chain 责任链模式
+- command 命令模式
+- interperter 解释器模式
+- iterator 迭代器模式
+- mediator 中介者模式
+- memento 备忘录模式
+- observer 观察者模式
+- state 状态模式
+- strategy 策略模式
+- template 模板模式
+- visitor 访问者模式
+
+##### 参考资料
+
+[tmrts](https://github.com/tmrts/go-patterns)
+
+[BPing](https://github.com/BPing/golang_design_pattern)
+
+[qibin0506](https://github.com/qibin0506/go-designpattern)
+
+[HCLAC](https://github.com/HCLAC/DesignPattern)
+
 
 

@@ -5,9 +5,8 @@ type IReadFile interface {
 }
 
 type ReadFile struct {
-
 }
 
-func (r ReadFile) ReadFile(filename string) string{
+func (r ReadFile) ReadFile(filename string) string {
 	return "文件内容为：保密内容"
 }

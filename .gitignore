@@ -1,0 +1,7 @@
+#bench gen
+*/*.test
+*/*.profile
+*/*.out
+*/intarray.txt
+*/*.svg
+.idea

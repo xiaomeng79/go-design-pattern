@@ -12,4 +12,3 @@ type ThreePlugAdapter struct {
 func (this ThreePlugAdapter) Charge() {
 	this.ThreePlug.ThreePlugCharge()
 }
-
