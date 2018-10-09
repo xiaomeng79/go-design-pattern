@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/xiaomeng79/go-design-pattern.svg?branch=master)](https://travis-ci.org/xiaomeng79/go-design-pattern) 
 [![GitHub license](https://img.shields.io/github/license/xiaomeng79/go-design-pattern.svg)](https://github.com/xiaomeng79/go-design-pattern/blob/master/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/xiaomeng79/go-design-pattern.svg)](https://github.com/xiaomeng79/go-design-pattern/issues) [![GitHub stars](https://img.shields.io/github/stars/xiaomeng79/go-design-pattern.svg)](https://github.com/xiaomeng79/go-design-pattern/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/xiaomeng79/go-design-pattern.svg)](https://github.com/xiaomeng79/go-design-pattern/issues) [![GitHub stars](https://img.shields.io/github/stars/xiaomeng79/go-design-pattern.svg)](https://github.com/xiaomeng79/go-design-pattern/stargazers) ![go1.11](https://img.shields.io/badge/go-1.11-brightgreen.svg)
 
 
 ####  设计模式的六大原则
