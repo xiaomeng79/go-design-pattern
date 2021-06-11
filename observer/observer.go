@@ -57,16 +57,3 @@ func (o *eventNotifier) Notify(e Event) {
 	}
 }
 
-//测试
-func Test() {
-	//观察者2个
-	ob1 := &eventObserver{id: 1}
-	ob2 := &eventObserver{id: 2}
-	//通知者
-	o := eventNotifier{observers: make(map[Observer]struct{}, 2)}
-	//注册
-	o.Register(ob1)
-	o.Register(ob2)
-	//发送
-	o.Notify(Event{Data: 222})
-}

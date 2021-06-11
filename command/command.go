@@ -17,7 +17,7 @@ type ICommand interface {
 //按键
 //开机命令
 type OpenCommand struct {
-	Tv *TV
+	Tv ITV
 }
 
 func (o OpenCommand) Press() {
@@ -26,7 +26,7 @@ func (o OpenCommand) Press() {
 
 //关机命令
 type CloseCommand struct {
-	Tv *TV
+	Tv ITV
 }
 
 func (c CloseCommand) Press() {

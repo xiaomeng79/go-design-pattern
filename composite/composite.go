@@ -72,7 +72,7 @@ type Department struct {
 	Company
 }
 
-//新建一个公司
+//新建一个部门
 func NewDepartment(name string) *Department {
 	return &Department{Company{Name: name}}
 }
